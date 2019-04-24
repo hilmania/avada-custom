@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                     'httpversion' => '1.0',
                     'blocking' => true,
                     'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
-                    'body' => array( 'username' => '930328', 'password' => 'November29' ),
+                    'body' => array( 'username' => '930328', 'password' => 'November30' ),
                     'cookies' => array()
                     )
                 );
