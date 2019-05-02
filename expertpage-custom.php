@@ -1,5 +1,5 @@
 <?php
-/* Template Name: ExpertPage */
+/* Template Name: ExpertPageCustom */
 
 
 
@@ -135,7 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<div class="desc"><?php echo $v->expertise; ?></div>
 												<div class="desc"><?php echo $v->major_competency; ?></div>
 											</div>
-											<div class="bottom">
+											<!-- <div class="bottom">
 												<a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
 													<i class="fa fa-twitter"></i>
 												</a>
@@ -150,7 +150,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 												<a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
 													<i class="fa fa-behance"></i>
 												</a>
-											</div>
+											</div> -->
 										</div>
 									</div>
                                 <?php } ?>
