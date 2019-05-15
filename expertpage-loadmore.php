@@ -60,9 +60,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="post-content">
 
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+				<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
 				 <div class="container">
                   <div id="load_data"></div>
@@ -71,29 +71,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<script>
 
-                     $(document).ready(function(){
+                     jQuery(document).ready(function(){
  
                      var limit = 20;
                      var start = 0;
                      var action = 'inactive';
                      function load_country_data(limit, start)
                       {
-                       $.ajax({
-                        url:"apifactory-loadmore.php",
+                       jQuery.ajax({
+                        url: site_url() . "/wp-admin/apifactory-loadmore.php",
                         method:"POST",
                         data:{limit:limit, start:start},
                         cache:false,
                         success:function(data)
                         {
-                         $('#load_data').append(data);
+                         jQuery('#load_data').append(data);
                          if(data == '')
                          {
-                          $('#load_data_message').html("<button type='button' class='btn btn-info'>No Data Found</button>");
+                          jQuery('#load_data_message').html("<button type='button' class='btn btn-info'>No Data Found</button>");
                           action = 'active';
                          }
                          else
                          {
-                          $('#load_data_message').html("<button type='button' class='btn btn-warning'>Please Wait....</button>");
+                          jQuery('#load_data_message').html("<button type='button' class='btn btn-warning'>Please Wait....</button>");
                           action = "inactive";
                          }
                         }
@@ -105,8 +105,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                      action = 'active';
                      load_country_data(limit, start);
                     }
-                    $(window).scroll(function(){
-                    if($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive')
+                    jQuery(window).scroll(function(){
+                    if(jQuery(window).scrollTop() + jQuery(window).height() > jQuery("#load_data").height() && action == 'inactive')
                     {
                      action = 'active';
                      start = start + limit;
